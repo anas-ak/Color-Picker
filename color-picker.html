@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #aaa;
+        }
+
+        input {
+            background-color: #ffffff;
+            width: 150px;
+            height: 10px;
+            border: 10px outset #222;
+            border-radius: 15px;
+            padding: none;
+        }
+
+        input:hover {cursor: pointer;}
+
+        h1, h2 {
+            margin: 0;
+            padding-left: 5px;
+            font-family: "Lato";
+            letter-spacing: 10px;
+            text-shadow: 2px 3px white;
+        }
+    </style>
+<body>
+    <div id="wrapper">
+        <h2>C O L O R</h2>
+        <h1>&#8609;</h1>
+        <input id="in" type="color" value="#ffffff" oninput="changeColor()">
+    </div>
+
+    <script>
+        function changeColor() {
+            var col = document.getElementById("in").value;
+            document.getElementById("wrapper").style.backgroundColor = col;
+            document.getElementById("wrapper").style.transition = "all 2s";
+        }
+    </script>
+</body>
+</html>
